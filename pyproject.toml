@@ -24,7 +24,7 @@ dependencies = [
 name = "kairon"
 version = "0.1.0"
 description = "AI-powered research assistant"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Akash Ajay Kallai <akashkallai27@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
