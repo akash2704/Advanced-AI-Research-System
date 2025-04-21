@@ -29,20 +29,42 @@ Kairon is a sophisticated AI-powered research system that combines web crawling,
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/kairon.git
+git clone https://github.com/akash2704/Advanced-AI-Research-System.git
 cd kairon
 ```
 
 2. Install dependencies using Poetry:
 ```bash
-poetry install
+poetry install --with dev
 ```
 
 3. Set up environment variables:
 ```bash
-cp .env.example .env
+cp .env
 # Edit .env with your API keys
 ```
+```env
+# Google Gemini API Configuration
+GOOGLE_API_KEY="your_gemini_api_key_here"
+
+# Tavily API Configuration
+TAVILY_API_KEY="your_tavily_api_key_here"
+
+# Optional: Logging Configuration
+LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+LOG_FILE=kairon.log
+```
+
+Important Notes:
+- The `.env` file should never be committed to version control
+- Keep your API keys secure and never share them publicly
+- The `.env.example` file is provided as a template
+- Required environment variables:
+  - `GOOGLE_API_KEY`: Your Google Gemini API key
+  - `TAVILY_API_KEY`: Your Tavily API key
+- Optional environment variables:
+  - `LOG_LEVEL`: Set the logging level (default: INFO)
+  - `LOG_FILE`: Specify the log file name (default: kairon.log)
 
 ## 💻 Usage
 
@@ -168,8 +190,8 @@ The system provides comprehensive quality metrics:
 ## 📧 Contact
 
 For inquiries and support:
-- Email: contact@kairon.co.in
-- GitHub Issues: [Create an issue](https://github.com/yourusername/kairon/issues)
+- Email: akashkallai27@gmail.com
+- GitHub Issues: [Create an issue](https://github.com/akash2704/Advanced-AI-Research-System/issues)
 
 ## 🙏 Acknowledgments
 
