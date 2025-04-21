@@ -2,6 +2,7 @@ import pytest
 from unittest.mock import Mock, patch
 from kairon.research_agent import ResearchAgent, ResearchState
 from kairon.draft_agent import DraftAgent, DraftState
+from kairon.quality_agent import QualityCheck
 from kairon.orchestrator import ResearchOrchestrator
 import os
 from dotenv import load_dotenv
@@ -103,13 +104,16 @@ def test_orchestrator_initialization(mock_gemini, mock_tavily):
 def test_orchestrator_research_process(mock_gemini, mock_tavily):
     """Test the complete research process through the orchestrator."""
     with patch('kairon.research_agent.TavilyClient', return_value=mock_tavily), \
-         patch('langchain_google_genai.ChatGoogleGenerativeAI', return_value=mock_gemini):
+         patch('langchain_google_genai.ChatGoogleGenerativeAI', return_value=mock_gemini):      
         orchestrator = ResearchOrchestrator()
         question = "What is the capital of France?"
-        
+
         result = orchestrator.run_research(question)
-        assert isinstance(result, str)
-        assert len(result) > 0
+        # The result is a tuple of (answer, quality_check)
+        assert isinstance(result, tuple)
+        assert len(result) == 2
+        assert isinstance(result[0], str)  # answer
+        assert isinstance(result[1], QualityCheck)  # quality_check
 
 def test_error_handling(mock_gemini, mock_tavily):
     """Test error handling in the research process."""
