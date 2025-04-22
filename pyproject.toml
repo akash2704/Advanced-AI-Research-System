@@ -8,15 +8,15 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 dependencies = [
-    "langchain>=0.1.0",
+    "langchain>=0.1.0,<0.2.0",
     "langgraph>=0.0.10",
     "tavily-python>=0.3.1",
+    "langchain-community>=0.0.38,<0.1.0",
     "python-dotenv>=1.0.0",
-    "pydantic>=2.0.0",
+    "pydantic>=2.5.0",
     "beautifulsoup4>=4.12.0",
     "requests>=2.31.0",
     "tqdm>=4.66.0",
-    "langchain-community>=0.0.10",
     "langchain-google-genai>=0.0.5"
 ]
 
@@ -24,23 +24,24 @@ dependencies = [
 name = "kairon"
 version = "0.1.0"
 description = "AI-powered research assistant"
-authors = ["Akash Ajay Kallai <akashkallai27@gmail.com>"]
+authors = ["Akash <akashkallai27@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 langchain = "^0.1.0"
 langchain-google-genai = "^0.0.5"
-tavily-python = "^0.3.0"
+tavily-python = "^0.3.1"
 pydantic = "^2.5.0"
 python-dotenv = "^1.0.0"
 langgraph = "^0.0.10"
 requests = "^2.31.0"
+langchain-community = "^0.0.38"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
 pytest-cov = "^4.1.0"
-black = "^23.11.0"
+black = "^24.3.0"
 isort = "^5.12.0"
 flake8 = "^6.1.0"
 bandit = "^1.7.5"
