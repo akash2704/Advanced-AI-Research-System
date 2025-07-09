@@ -1,7 +1,7 @@
 site_name: Kairon Documentation
 site_description: AI-powered research assistant documentation
-site_author: Your Name
-site_url: https://yourusername.github.io/kairon
+site_author: Akash Ajay Kallai
+site_url: https://akash2704.github.io/kairon
 
 theme:
   name: material
@@ -15,8 +15,8 @@ theme:
     - search.share
     - toc.integrate
 
-repo_name: yourusername/kairon
-repo_url: https://github.com/yourusername/kairon
+repo_name: akash2704
+repo_url: https://github.com/akash2704/Advanced-AI-Research-System
 
 nav:
   - Home: index.md
